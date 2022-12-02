@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](feng.jpg)
+![logo](feng.JPG)
 
 # welcome to our web~ <small>four vegetables</small>
 
