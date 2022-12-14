@@ -29,8 +29,8 @@
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture32.jpg"/>
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture33.jpg"/>
 #### 测试模型2
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture34.jpg"/>
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture35.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture34.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture35.jpg"/>
 
 
 ## 激光雕刻测试
@@ -85,6 +85,6 @@
 #### 速度测试
 
 1. 软件参数设定与调整
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture39.png"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture39.png"/>
 2. 激光雕刻机切割测试
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture310.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture310.jpg"/>
