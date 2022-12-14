@@ -12,7 +12,7 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
 ### processsing环境搭建
 
 1. Processing 环境：
-   第一步是安装 Processing 环境。去到 Processing.org（https://processing.org/download/），单击 Download Processing 并选择您的操作系统。此外，还需要确保 Java 技术已经可用。在windows上，下载解压后直接运行processing.exe即可。
+   第一步是安装 Processing 环境。去到 Processing.org（https://processing.org/download/), 单击Download Processing 并选择您的操作系统。此外，还需要确保 Java 技术已经可用。在windows上，下载解压后直接运行processing.exe即可。
    这应该会弹出 Processing Development Environment（PDE 或 Processing IDE），如图 1 所示。占此窗口较大的部分是文本编辑器。如果输入图中所示的两行代码，然后单击 Run（左上角的三角形），出现一个窗口，显示您所输入的简单程序（或 Processing 术语所指的 sketch）的结果。单击 Stop（左上角的方框）退出程序，窗口消失。
 
 2. Processing 语言
