@@ -15,7 +15,7 @@ hello,we are **four vegetables!**
 ---
 
 ### 鲍彦池
-<img src="/img/4.jpg" width="300">
+<img src="/img/1/4.jpg" width="300">
 
 
 [>>鲍彦池个人详情](baoyanchi)
