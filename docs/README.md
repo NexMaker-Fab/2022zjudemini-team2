@@ -8,7 +8,7 @@ hello,we are **four vegetables!**
 ## Members:
 
 ### 陈祉伊
-<img src="/img/1/2.jpg" width="300">
+<img src="img/1/2.jpg" width="300">
 
 [>>陈祉伊个人详情](chenzhiyi)
 
