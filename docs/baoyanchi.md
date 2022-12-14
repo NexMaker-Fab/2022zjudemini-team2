@@ -5,6 +5,6 @@
 
 机械工程
 
-<img src="4.jpg" width="300">
+<img src="img/1/4.jpg" width="300">
 
 [>>return](/)
