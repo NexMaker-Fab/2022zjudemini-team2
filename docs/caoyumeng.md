@@ -8,6 +8,6 @@
 > 样品简介仅供参考，详情以实物为主
 
 
-<img src="1.jpg" width="300">
+<img src="img/1/1.jpg" width="300">
 
 [>>return](/)
