@@ -25,9 +25,9 @@
 
 ## 3D打印测试
 #### 测试模型1
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture31.jpg"/>
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture32.jpg"/>
-< img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture33.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture31.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture32.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture33.jpg"/>
 #### 测试模型2
 < img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture34.jpg"/>
 < img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture35.jpg"/>
