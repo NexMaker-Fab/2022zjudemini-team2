@@ -165,6 +165,7 @@ F - 用于从板接收串行数据并将串行数据发送到板的串行监视�
 <img src="img/1/21.jpg">
 
 - 源代码
+
 ```
 const int analogPin=A0; 
 const int digitalPin=7; 
@@ -175,9 +176,6 @@ int greenPin = 4; //定义绿色引脚
 int val = 0;    
 int aState=0;
 boolean dState=0;
-
-
-
 void setup() {
   //设置红色引脚为输出
  pinMode(redPin, OUTPUT);
@@ -186,7 +184,6 @@ void setup() {
  pinMode(digitalPin,INPUT);
  Serial.begin(9600);
 }
-
 void loop() {
   aState=analogRead(analogPin); 
   Serial.print("A0: ");
@@ -204,10 +201,108 @@ void loop() {
     digitalWrite(redPin, HIGH); 
     digitalWrite(greenPin, LOW); 
     }
- 
 }
 ```
 - 效果展示：
-<embed src="img/0/1.mp4" width=100% heigh=100%/>
+<br>
+<embed src="img/0/1.mp4" width=1080 heigh=600/>
 
-#### 实验二：超声传感
+#### 实验二：超声传感测距实验
+##### **实验背景**
+
+    超声波测距，接lcd显示屏，可用于障碍物距离的监测， 并转成数定信号和 AO 输出
+
+##### **实验器材**
+1. 面包板一块
+
+2. 导线
+
+3. Arduino主板
+
+4. HC-SR04模块
+
+5. lcd1602
+
+##### **超声波传感器简介**
+- 传感器介绍：
+    HC-SR04超声波传感器使用声纳来确定物体的距离，就像蝙蝠一样。它提供了非常好的非接触范围检测，准确度高，读数稳定，易于使用，尺寸从2厘米到400厘米或1英寸到13英尺不等。
+
+其操作不受阳光或黑色材料的影响，尽管在声学上，柔软的材料（如布料等）可能难以检测到。它配有超声波发射器和接收器模块。
+  <img src="img/1/22.png">
+
+- 参数 
+1. 电源 - + 5V DC
+2. 静态电流 - <2mA
+3. 工作电流 - 15mA
+4. 有效角度 - <15°
+5. 测距距离 - 2厘米-400厘米/1英寸-13英尺
+6. 分辨率 - 0.3厘米
+7. 测量角度 - 30度
+
+- 工作原理：
+1. 采用IO触发测距10us的高电平信号;
+2. 模块自动发送8个40khz的方波，自动检测是否有信号返回；
+3. 有信号返回，通过IO输出一高电平，高电平持续的时间就是超声波从发射到返回的时间．
+测试距离=(高电平时间*声速(340M/S))/2;
+
+
+
+- 电原理图
+<img src="img/1/23.jpg">
+
+- 源代码
+```
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(3, 5, 7, 8, 9, 10);
+const int TrigPin = 11;
+const int EchoPin = 12;
+float cm;
+ 
+ 
+
+float distance;                   //定义距离变量
+void setup()
+{
+  Serial.begin(9600);             //开启串口
+
+  pinMode(TrigPin, OUTPUT);       //设置超声波传感器引脚模式
+  pinMode(EchoPin, INPUT);
+  
+  lcd.setCursor(0,0);             //设置光标位置
+  lcd.print("Distance test");     //显示内容
+}
+void loop()
+{
+  get_dis();                      //获取距离函数
+  lcd_display();                  //lcd显示函数
+  delay(500);                     //延时
+}
+void get_dis()                    //获取距离子函数
+{
+  digitalWrite(TrigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TrigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TrigPin, LOW);
+  distance = pulseIn(EchoPin, HIGH) / 58.0; 
+  Serial.print(distance);
+  Serial.println("cm");
+}
+
+void lcd_display()                //lcd显示子函数
+{
+  int dis = int(distance);
+  
+  lcd.setCursor(0,1);
+  if(dis >= 0 && dis < 1000)
+  {
+    lcd.print("Dis:");
+    lcd.print(dis);
+  }
+  
+  if(dis < 100) lcd.print(' ');
+  
+  lcd.setCursor(8,1);
+  lcd.print("cm");
+}
+```
