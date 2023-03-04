@@ -208,6 +208,6 @@ void loop() {
 }
 ```
 - 效果展示：
-<embed src="img/0/1.mp4" width="500" heigh="500"/>
+<embed src="img/0/1.mp4" width=100% heigh=100%/>
 
 #### 实验二：超声传感
