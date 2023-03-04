@@ -12,7 +12,7 @@ hello,we are **four vegetables!**
 ### 陈祉伊
 <img src="img/1/2.jpg" width="300">
 
-[>>陈祉伊个人详情](chenzhiyi)
+[>>陈祉伊个人详情](chenzhiyi).
 
 ---
 
