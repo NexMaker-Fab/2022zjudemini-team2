@@ -11,7 +11,7 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 
 它是仿真软件
 
-## 建模过程
+## 建模过程1
 1. 通过"拉伸"建立底座，并切除四个小孔，与立方体轨道建立固定装配关系
 
 <img src="01.jpg" width="300">
@@ -34,5 +34,7 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 <img src="06.jpg" width="300">
 <img src="07.jpg" width="300">
 
+## 建模过程2
+1. 首先绘制出底座的形状，给定尺寸及约束。
 
 [>>return](/)
