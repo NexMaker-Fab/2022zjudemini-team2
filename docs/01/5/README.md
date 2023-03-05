@@ -250,6 +250,9 @@ void loop() {
 - 电原理图
 <img src="img/1/23.jpg">
 
+- 接线图
+  <img src="img/1/24.png">
+
 - 源代码
 ```
 #include <LiquidCrystal.h>
@@ -257,9 +260,6 @@ LiquidCrystal lcd(3, 5, 7, 8, 9, 10);
 const int TrigPin = 11;
 const int EchoPin = 12;
 float cm;
- 
- 
-
 float distance;                   //定义距离变量
 void setup()
 {
@@ -306,3 +306,5 @@ void lcd_display()                //lcd显示子函数
   lcd.print("cm");
 }
 ```
+- 效果展示
+  <img src="img/1/22.png">
