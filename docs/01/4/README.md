@@ -46,6 +46,9 @@ Arduino的GND引脚。
 2. 将超声波传感器的Trig引脚连接到Arduino的9号引脚，Echo引脚连接到
 Arduino的10号引脚。
 
+- 实物连接图
+<img src="img/1/25.jpg">
+
 - arduino源代码
 
 ```
