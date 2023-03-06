@@ -205,7 +205,7 @@ void loop() {
 ```
 - 效果展示：
 <br>
-<embed src="img/0/1.mp4" width=1080 heigh=600/>
+<img src="img/0/5.gif">
 
 #### 实验二：超声传感测距实验
 ##### **实验背景**
@@ -307,4 +307,4 @@ void lcd_display()                //lcd显示子函数
 }
 ```
 - 效果展示
-  <img src="img/1/22.png">
+<img src="img/0/4.gif">
