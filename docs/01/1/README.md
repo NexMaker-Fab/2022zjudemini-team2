@@ -105,8 +105,20 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 <!-- 背景色 -->
 ![color](#f0f0f0)
 ```
+#### 5.从远程仓库获取更改
+与远程存储库交互时，这些命令非常有用。 clone 和 fetch 将远程代码从存储库的远程 URL 下载到本地计算机，merge 用于将其他人的工作与你的工作合并在一起，而 pull 是 fetch 和 merge 的组合。
+1. 克隆仓库
+克隆存储库时，可以从多个不同的 URL 中进行选择。 登录到 GitHub 后，可在仓库详细信息下面找到这些 URL：
+<img src="img/1/27.jpg">
 
-#### 4.本地上传部署
+运行 git clone 时，会执行以下操作：
+
+- 创建名为 repo 的新文件夹
+- 将它初始化为 Git 仓库
+- 创建名为 origin 的远程存储库，指向用于克隆的 URL
+- 将所有的仓库文件和提交下载到那里
+
+#### 6.本地上传部署
 1. 打开GitHub desktop，当我们每次做出修改时，将项目文件克隆到本地进行修改后实时上传更新即可
 <img src="img/1/8.png">
 
@@ -156,4 +168,5 @@ vs code打开工作区就会看到所有代码显示在这里
 [docsify:一个神奇的文档网站生成器。](https://www.nexmaker.com/doc/1projectmanage/github&docsify.html)<br>
 [docsify使用指南](https://www.cnblogs.com/Can-daydayup/p/15413267.html)<br>
 [GitHub Pages部署教程](https://docs.github.com/zh/pages/getting-started-with-github-pages/about-github-pages)<br>
+[GitHub Docs](https://docs.github.com/zh)<br>
 [>>return](/)
