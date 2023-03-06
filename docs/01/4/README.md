@@ -1,5 +1,5 @@
 # processing
-### processsing简介
+## processsing简介
 
 Processing 在 2001 年诞生于麻省理工学院（MIT）的媒体实验室，主创者为 Ben Fry 和 Casey Reas，项目发起的初衷，本是为了满足他们自身的教学和学习需要。后来，当Casey在意大利的伊夫雷亚交互设计学院（Interaction Design Institute Ivrea）进行教学的时候，基于Processing，衍生出了Wiring和Arduino项目。随着时间的推移，又诞生了多个语言的版本，比如基于JavaScript的Processing.js，还有基于Python、Ruby、ActionScript以及Scala等版本。而当前的Processing，成立了相应的基金会，由基金会负责软件的开发和维护工作。
 Processing项目是Java开发的，所以Processing天生就具有跨平台的特点，同时支持Linux、Windows以及Mac OSX三大平台，并且支持将图像导出成各种格式。对于动态应用程序，甚至可以将 Processing 应用程序作为 Java™ applet 导出以用在 Web 环境内。当然，为了降低设计师的学习门槛，用Processing进行图形设计的编程语言并不是Java，而是重新开发了一门类C的编程语言，这也让非计算机科班出身的设计师很容易上手。这里要多提一句，Processing支持OpenGL和WebGL，不但可以渲染2D图形，还可以渲染3D图形。
@@ -9,7 +9,7 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
 
 
 
-### processsing环境搭建
+## processsing环境搭建
 
 1. Processing 环境：
    第一步是安装 Processing 环境。去到 Processing.org（https://processing.org/download/), 单击Download Processing 并选择您的操作系统。此外，还需要确保 Java 技术已经可用。在windows上，下载解压后直接运行processing.exe即可。
@@ -33,23 +33,23 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
    setup 函数用于初始化，由 Processing 运行时执行一次。通常，setup 函数包含 size 函数（用于定义窗口的边界）以及在操作期间要使用的变量的初始化。Processing 运行时会不断执行 draw 函数。每次 draw 函数结束后，就会在显示窗口绘制一个新的画面，并且 draw 函数也会被再次调用。默认的绘制速度是每秒 60 个画面，但是您也可以通过调用 frameRate 函数来更改这个速度。
    此外，还可以使用 noLoop 和 draw 来控制在何时绘制画面。noLoop 函数会导致绘制停止，而使用 loop 函数则可以重新开始绘制。通过调用 redraw 可以控制 draw 在何时调用。
 
-### processing与arduino联动实验
-#### Arduino与processing联通过程
+## processing与arduino联动实验
+### Arduino与processing联通过程
 这两个程序的关系是，Arduino程序通过超声波传感器读取距离值，并通过串口通信将距离值发送到Processing程序。Processing程序则根据距离值来改变圆球的大小，从而实现交互效果。
 具体来说，Arduino程序通过Serial.begin()函数初始化串口通信，并通过Serial.println()函数将距离值发送到串口。Processing程序则通过Serial port = new Serial(this, "COM3", 9600);语句连接串口，并使用port.available()函数读取串口缓冲区中是否有可读数据。如果有数据，就使用port.readStringUntil('\n')函数读取一行数据，并使用map()函数将距离值映射到合适的圆球大小。最后，Processing程序通过ellipse()函数画出圆球，并实现交互效果。
 
 在实际应用中，需要将Arduino程序上传到Arduino板子中，并将Arduino板子通过USB线连接到计算机上。然后，运行Processing程序，在串口连接的窗口中选择对应的串口号和波特率，即可实现Arduino和Processing程序之间的联通。
 
-- Arduino引线连接方法如下:
+- #### Arduino引线连接方法如下:
 1. 将超声波传感器的VCC引脚连接到Arduino的5V引脚，GND引脚连接到
 Arduino的GND引脚。
 2. 将超声波传感器的Trig引脚连接到Arduino的9号引脚，Echo引脚连接到
 Arduino的10号引脚。
 
-- 实物连接图
+- #### 实物连接图
 <img src="img/1/25.jpg">
 
-- arduino源代码
+- #### arduino源代码
 
 ```
 const int trigPin = 9; //超声波传感器触发引脚
@@ -84,7 +84,7 @@ void loop() {
 }
 ```
 
-- processing源代码
+- #### processing源代码
 
 ```
 import processing.serial.*;
@@ -119,15 +119,15 @@ void draw() {
 ```
 
 
-- 效果展示
+- #### 效果展示
 <img src="img/0/3.gif">
 
 ### processing小游戏
-- 效果展示
-
+- #### 效果展示
+ 
 <embed src="img/0/0.mp4" width="500" heigh="500"/>
 
-- 源代码：
+- #### 源代码：
 ```
 import ddf.minim.*;
 Minim minim;

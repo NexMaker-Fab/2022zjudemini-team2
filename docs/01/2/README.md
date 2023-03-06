@@ -36,7 +36,7 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 <img src="07.jpg" width="300">
 
 ## 建模过程2
-- 底座
+- #### 底座
 1. 首先绘制出底座的形状，给定尺寸及约束。
 <img src="img/1/2/1.png" width="300">
 
@@ -55,26 +55,26 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 6. 伸切除形成凹槽。
 <img src="img/1/2/6.png" width="300">
 
-- 连接杆 
+- #### 连接杆 
 绘制连杆形状，确定固定孔的位置，然后拉伸成型。
 <img src="img/1/2/7.png" width="300">
 
-- 插销
+- #### 插销
 绘制插销形状，旋转成型。 
 <img src="img/1/2/8.png" width="300">
 
 先绘制草图，拉伸出两个圆柱；然后建立基准面，切除小孔。 
 <img src="img/1/2/9.png" width="300">
 
-- 升降台
+- #### 升降台
 升降台建模过程类似底座。
 <img src="img/1/2/10.png" width="300">
 
-- 滑轮杆
+- #### 滑轮杆
 先拉伸出杆，加圆角特征；然后两侧分别拉伸出圆柱和滑轮。
 <img src="img/1/2/11.png" width="300">
 
-- 以下为同心、重合、相切等装配过程：
+- #### 以下为同心、重合、相切等装配过程：
 <img src="img/1/2/12.png" width="300">
 <img src="img/1/2/13.png" width="300">
 <img src="img/1/2/14.png" width="300">
