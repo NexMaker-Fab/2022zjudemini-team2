@@ -28,6 +28,12 @@ node -v
 
 详情参照[此网页教程](https://www.nexmaker.com/doc/1projectmanage/github&docsify.html)
 
+4. **GitHub Pages 站点部署**
+
+- 关于 GitHub Pages
+GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。 
+你可以在 GitHub 的 github.io 域或自己的自定义域上托管站点。
+你可以创建在 Internet 上公开可用的 GitHub Pages 站点。 使用 GitHub Enterprise Cloud 的组织还可以通过管理对站点的访问控制来私下发布站点
 
 #### 2.使用Docsify配合Markdown语言搭建网站
 1. 全局安装  docsify-cli 工具，可以方便地创建及在本地预览生成的文档。
@@ -88,20 +94,15 @@ node -v
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 - 目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
+
 ```
 <!-- _coverpage.md -->
-
 # docsify <small>3.5</small>
-
 [GitHub](https://github.com/NexMaker-Fab/2022zjudemini-team2)
 [Get Started](#quick-start)
-
 <!-- 背景图片 -->
-
 ![](feng.JPG)
-
 <!-- 背景色 -->
-
 ![color](#f0f0f0)
 ```
 
@@ -123,6 +124,24 @@ vs code打开工作区就会看到所有代码显示在这里
 然后打开菜单选择--提交已暂存的
 <img src="img/1/12.png">
 
+#### 5.设置 GitHub Pages 站点的可见性
+如果对 GitHub Pages 具有访问控制权限，便可以通过私密发布站点来限制访问项目站点。 只有对发布站点的仓库具有读取权限的人才可访问私密发布的站点。 
+- 以私密方式发布的站点的子域
+私下发布的站点与公开发布的站点位于不同的子域中。 这可确保您的 GitHub Pages 站点从发布之日起是安全的：
+
+我们使用 TLS 证书自动保护 *.pages.github.io 的每个子域，并强制执行 HSTS 以确保浏览器始终通过 HTTPS 提供页面。
+我们对以私密方式发布的站点使用独特的子域，从而确保组织中其他存储库不能在与该站点相同的来源发布内容。 这样可以保护这些站点免受“cookie 抛掷”攻击。 这也是为什么我们不在 github.com 域上托管 GitHub Pages 网站的原因。
+- 更改 GitHub Pages 站点的可见性
+1. 在 GitHub Enterprise Cloud 上，导航到站点的仓库。 1. 在存储库名称下，单击 “设置”。
+<img src="img/1/29.jpg">
+
+2. 在边栏的“代码和自动化”部分，单击“ 页面”。
+3. 在 GitHub Pages 下，选择“GitHub Pages 可见性”下拉菜单，然后单击可见性。
+<img src="img/1/26.jpg">
+
+4. 若要查看已发布的网站，请在“GitHub Pages”下单击“ 访问网站”。
+<img src="img/1/28.jpg">
+
 ## tips
 1. 重新开启vs code时，要调出本地预览网页，需先在下方终端中输入
 
@@ -136,5 +155,5 @@ vs code打开工作区就会看到所有代码显示在这里
 ## reference
 [docsify:一个神奇的文档网站生成器。](https://www.nexmaker.com/doc/1projectmanage/github&docsify.html)<br>
 [docsify使用指南](https://www.cnblogs.com/Can-daydayup/p/15413267.html)<br>
-
+[GitHub Pages部署教程](https://docs.github.com/zh/pages/getting-started-with-github-pages/about-github-pages)<br>
 [>>return](/)
