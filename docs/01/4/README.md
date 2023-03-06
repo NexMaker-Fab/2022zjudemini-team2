@@ -22,13 +22,9 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
 3. 图形环境
    在 Processing 内进行开发涉及到的是 PDE 和显示窗口。2-D 图形的坐标系如图 2 所示。size 关键字以像素为单位定义了显示窗口的大小并且通常都是 Processing 应用程序内的首要步骤。
 
-   
-
- size 关键字指定显示窗口的 X 和 Y 坐标。line 关键字则会在两个像素点之间绘制一条线（以 x1、y1 to x2、y2 的格式）。超出屏幕边界（size 定义的边界外）画线并非不允许，只是被忽略了而已。
+   size 关键字指定显示窗口的 X 和 Y 坐标。line 关键字则会在两个像素点之间绘制一条线（以 x1、y1 to x2、y2 的格式）。超出屏幕边界（size 定义的边界外）画线并非不允许，只是被忽略了而已。
     size 接受可选的第三个参数 mode。 mode 用来定义要使用的呈现引擎并支持 PDF（直接呈现为 Adobe® PDF 文档）、OPENGL （利用一个可用的 Open-GL 图形适配器）、P3D（为了迅速的 3-D 呈现）等。默认的是 JAVA2D，它最适合于高质量的 2-D 成像。
 
-
-   
 
 4. 图形原语
    Processing 包含了大量各种各样的几何形状以及这些形状的控件。
@@ -37,9 +33,12 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
    setup 函数用于初始化，由 Processing 运行时执行一次。通常，setup 函数包含 size 函数（用于定义窗口的边界）以及在操作期间要使用的变量的初始化。Processing 运行时会不断执行 draw 函数。每次 draw 函数结束后，就会在显示窗口绘制一个新的画面，并且 draw 函数也会被再次调用。默认的绘制速度是每秒 60 个画面，但是您也可以通过调用 frameRate 函数来更改这个速度。
    此外，还可以使用 noLoop 和 draw 来控制在何时绘制画面。noLoop 函数会导致绘制停止，而使用 loop 函数则可以重新开始绘制。通过调用 redraw 可以控制 draw 在何时调用。
 
+### processing与arduino联动实验
+- 效果展示
+<img src="img/0/3.gif">
 
 ### processing小游戏
-效果展示
+- 效果展示
 
 <embed src="img/0/0.mp4" width="500" heigh="500"/>
 
@@ -47,7 +46,7 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
 
 
 
-源代码：
+- 源代码：
 ```
 import ddf.minim.*;
 Minim minim;
