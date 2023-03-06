@@ -34,6 +34,87 @@ Processing项目是Java开发的，所以Processing天生就具有跨平台的�
    此外，还可以使用 noLoop 和 draw 来控制在何时绘制画面。noLoop 函数会导致绘制停止，而使用 loop 函数则可以重新开始绘制。通过调用 redraw 可以控制 draw 在何时调用。
 
 ### processing与arduino联动实验
+#### Arduino与processing联通过程
+这两个程序的关系是，Arduino程序通过超声波传感器读取距离值，并通过串口通信将距离值发送到Processing程序。Processing程序则根据距离值来改变圆球的大小，从而实现交互效果。
+具体来说，Arduino程序通过Serial.begin()函数初始化串口通信，并通过Serial.println()函数将距离值发送到串口。Processing程序则通过Serial port = new Serial(this, "COM3", 9600);语句连接串口，并使用port.available()函数读取串口缓冲区中是否有可读数据。如果有数据，就使用port.readStringUntil('\n')函数读取一行数据，并使用map()函数将距离值映射到合适的圆球大小。最后，Processing程序通过ellipse()函数画出圆球，并实现交互效果。
+
+在实际应用中，需要将Arduino程序上传到Arduino板子中，并将Arduino板子通过USB线连接到计算机上。然后，运行Processing程序，在串口连接的窗口中选择对应的串口号和波特率，即可实现Arduino和Processing程序之间的联通。
+
+- Arduino引线连接方法如下:
+1. 将超声波传感器的VCC引脚连接到Arduino的5V引脚，GND引脚连接到
+Arduino的GND引脚。
+2. 将超声波传感器的Trig引脚连接到Arduino的9号引脚，Echo引脚连接到
+Arduino的10号引脚。
+
+- arduino源代码
+
+```
+const int trigPin = 9; //超声波传感器触发引脚
+const int echoPin = 10; //超声波传感器回响引脚
+const int ledPin = 13; //LED引脚
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600); //启动串口通信
+}
+
+void loop() {
+  // 发送10微秒的高电平信号，以触发传感器发送超声波
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // 读取回响时间，并计算出距离
+  long duration = pulseIn(echoPin, HIGH);
+  float distance = duration * 0.034 / 2;
+
+  // 控制LED灯的亮灭，距离小于20cm时亮灯，否则灭灯
+  if (distance < 20) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+
+  Serial.println(distance); //在串口监视器中输出距离值
+  delay(100); //延迟100毫秒
+}
+```
+
+- processing源代码
+```
+import processing.serial.*;
+
+Serial port;
+int radius = 50;
+
+void setup() {
+  size(500, 500);
+  port = new Serial(this, "COM3", 9600); //连接串口
+}
+
+void draw() {
+  background(255);
+
+  // 读取距离值
+  if (port.available() > 0) {
+    String distanceStr = port.readStringUntil('\n');
+    if (distanceStr != null) {
+      distanceStr = distanceStr.trim();
+      float distance = float(distanceStr);
+      // 根据距离值改变圆球的大小
+      radius = int(map(distance, 0, 50, 20, 100));
+    }
+  }
+
+  // 画圆球
+  fill(255, 0, 0);
+  noStroke();
+  ellipse(width/2, height/2, radius, radius);
+}
+```
+
 - 效果展示
 <img src="img/0/3.gif">
 

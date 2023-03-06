@@ -86,14 +86,14 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 
 ## 建模过程3
 1. 绘制草图，旋转成型
-<img src="img/1/2/20.png" width="300">
+<img src="img/1/2/20.PNG" width="300">
 
 2. 拉伸出圆柱轴和手柄
-<img src="img/1/2/21.png" width="300">
+<img src="img/1/2/21.PNG" width="300">
 
 3. 同心配合
-<img src="img/1/2/22.png" width="300">
+<img src="img/1/2/22.PNG" width="300">
 
-<img src="img/0/2.gif" width="300">
+<img src="img/0/2.gif">
 
 [>>return](/)
