@@ -38,52 +38,62 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 ## 建模过程2
 - 底座
 1. 首先绘制出底座的形状，给定尺寸及约束。
-<img src="img/1/2/1.png">
+<img src="img/1/2/1.png" width="300">
 
 2. 拉伸凸台成型。
-<img src="img/1/2/2.png">
+<img src="img/1/2/2.png" width="300">
 
 3. 绘制底面挖空部分，并设定尺寸。
-<img src="img/1/2/3.png">
+<img src="img/1/2/3.png" width="300">
 
 4. 切除拉伸。
-<img src="img/1/2/4.png">
+<img src="img/1/2/4.png" width="300">
 
 5. 绘制侧面的直槽孔和小孔。
-<img src="img/1/2/5.png">
+<img src="img/1/2/5.png" width="300">
 
 6. 伸切除形成凹槽。
-<img src="img/1/2/6.png">
+<img src="img/1/2/6.png" width="300">
 
 - 连接杆 
 绘制连杆形状，确定固定孔的位置，然后拉伸成型。
-<img src="img/1/2/7.png">
+<img src="img/1/2/7.png" width="300">
 
 - 插销
 绘制插销形状，旋转成型。 
-<img src="img/1/2/8.png">
+<img src="img/1/2/8.png" width="300">
 
 先绘制草图，拉伸出两个圆柱；然后建立基准面，切除小孔。 
-<img src="img/1/2/9.png">
+<img src="img/1/2/9.png" width="300">
 
 - 升降台
 升降台建模过程类似底座。
-<img src="img/1/2/10.png">
+<img src="img/1/2/10.png" width="300">
 
 - 滑轮杆
 先拉伸出杆，加圆角特征；然后两侧分别拉伸出圆柱和滑轮。
-<img src="img/1/2/11.png">
+<img src="img/1/2/11.png" width="300">
 
 - 以下为同心、重合、相切等装配过程：
-<img src="img/1/2/12.png">
-<img src="img/1/2/13.png">
-<img src="img/1/2/14.png">
-<img src="img/1/2/15.png">
-<img src="img/1/2/16.png">
-<img src="img/1/2/17.png">
-<img src="img/1/2/18.png">
-<img src="img/1/2/19.png">
+<img src="img/1/2/12.png" width="300">
+<img src="img/1/2/13.png" width="300">
+<img src="img/1/2/14.png" width="300">
+<img src="img/1/2/15.png" width="300">
+<img src="img/1/2/16.png" width="300">
+<img src="img/1/2/17.png" width="300">
+<img src="img/1/2/18.png" width="300">
+<img src="img/1/2/19.png" width="300">
 
+## 建模过程3
+1. 绘制草图，旋转成型
+<img src="img/1/2/20.png" width="300">
 
+2. 拉伸出圆柱轴和手柄
+<img src="img/1/2/21.png" width="300">
+
+3. 同心配合
+<img src="img/1/2/22.png" width="300">
+
+<img src="img/0/2.gif" width="300">
 
 [>>return](/)
