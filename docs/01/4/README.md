@@ -61,8 +61,7 @@ void setup() {
   pinMode(echoPin, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600); //启动串口通信
-}
-
+=
 void loop() {
   // 发送10微秒的高电平信号，以触发传感器发送超声波
   digitalWrite(trigPin, HIGH);
@@ -86,6 +85,7 @@ void loop() {
 ```
 
 - processing源代码
+
 ```
 import processing.serial.*;
 
@@ -117,6 +117,7 @@ void draw() {
   ellipse(width/2, height/2, radius, radius);
 }
 ```
+
 
 - 效果展示
 <img src="img/0/3.gif">
@@ -599,6 +600,7 @@ class Enemey
   }
 }
 ```
+
 ## reference
 [processing](https://processing.org/)<br>
 [processing 教程](https://www.oschina.net/informat/processing+%E6%95%99%E7%A8%8B)<br>
