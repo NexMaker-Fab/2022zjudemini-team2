@@ -7,7 +7,7 @@
 系统：macos
 
 ## 网页搭建步骤
-#### 1.注册github账号
+### 1.注册github账号
 1. **通过邮箱申请github账号**
 注册一个github账号，用来存放我们的网站，新建一个项目，如下所示：
 <img src="img/1/5.png">
@@ -35,21 +35,21 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 你可以在 GitHub 的 github.io 域或自己的自定义域上托管站点。
 你可以创建在 Internet 上公开可用的 GitHub Pages 站点。 使用 GitHub Enterprise Cloud 的组织还可以通过管理对站点的访问控制来私下发布站点
 
-#### 2.使用Docsify配合Markdown语言搭建网站
+### 2.使用Docsify配合Markdown语言搭建网站
 1. 全局安装  docsify-cli 工具，可以方便地创建及在本地预览生成的文档。
 
 打开github终端并键入下列代码：
-    
+```
     npm i docsify-cli -g
-
+```
 2. 在项目的./docs 目录里写文档，直接通过 init 初始化项目
-
+```
     docsify init ./docs
-
+```
 3. 通过运行 docsify serve 启动一个本地服务器，可以方便地实时预览效果。默认访问[此地址]( http://localhost:3000)
-    
+```  
     docsify serve docs
-
+```
 更多命令行工具用法，参考 [docsify-cli](https://github.com/docsifyjs/docsify-cli) 文档。
 
 4. 为了获得侧边栏，您需要创建自己的_sidebar.md，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。
@@ -105,7 +105,7 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 <!-- 背景色 -->
 ![color](#f0f0f0)
 ```
-#### 5.从远程仓库获取更改
+### 5.从远程仓库获取更改
 与远程存储库交互时，这些命令非常有用。 clone 和 fetch 将远程代码从存储库的远程 URL 下载到本地计算机，merge 用于将其他人的工作与你的工作合并在一起，而 pull 是 fetch 和 merge 的组合。
 1. 克隆仓库
 克隆存储库时，可以从多个不同的 URL 中进行选择。 登录到 GitHub 后，可在仓库详细信息下面找到这些 URL：
@@ -118,7 +118,7 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 - 创建名为 origin 的远程存储库，指向用于克隆的 URL
 - 将所有的仓库文件和提交下载到那里
 
-#### 6.本地上传部署
+### 6.本地上传部署
 1. 打开GitHub desktop，当我们每次做出修改时，将项目文件克隆到本地进行修改后实时上传更新即可
 <img src="img/1/8.png">
 
@@ -133,17 +133,18 @@ vs code打开工作区就会看到所有代码显示在这里
 
 点击+号，把所有文件提交到暂存区。
 
-然后打开菜单选择--提交已暂存的
+然后打开菜单选择--提交已暂存的.
+
 <img src="img/1/12.png">
 
-#### 5.设置 GitHub Pages 站点的可见性
+### 7.设置 GitHub Pages 站点的可见性
 如果对 GitHub Pages 具有访问控制权限，便可以通过私密发布站点来限制访问项目站点。 只有对发布站点的仓库具有读取权限的人才可访问私密发布的站点。 
-- 以私密方式发布的站点的子域
-私下发布的站点与公开发布的站点位于不同的子域中。 这可确保您的 GitHub Pages 站点从发布之日起是安全的：
+- **以私密方式发布的站点的子域**
+    私下发布的站点与公开发布的站点位于不同的子域中。 这可确保您的 GitHub Pages 站点从发布之日起是安全的：
 
-我们使用 TLS 证书自动保护 *.pages.github.io 的每个子域，并强制执行 HSTS 以确保浏览器始终通过 HTTPS 提供页面。
-我们对以私密方式发布的站点使用独特的子域，从而确保组织中其他存储库不能在与该站点相同的来源发布内容。 这样可以保护这些站点免受“cookie 抛掷”攻击。 这也是为什么我们不在 github.com 域上托管 GitHub Pages 网站的原因。
-- 更改 GitHub Pages 站点的可见性
+    我们使用 TLS 证书自动保护 *.pages.github.io 的每个子域，并强制执行 HSTS 以确保浏览器始终通过 HTTPS 提供页面。
+    我们对以私密方式发布的站点使用独特的子域，从而确保组织中其他存储库不能在与该站点相同的来源发布内容。 这样可以保护这些站点免受“cookie 抛掷”攻击。 这也是为什么我们不在 github.com 域上托管 GitHub Pages 网站的原因。
+- **更改 GitHub Pages 站点的可见性**
 1. 在 GitHub Enterprise Cloud 上，导航到站点的仓库。 1. 在存储库名称下，单击 “设置”。
 <img src="img/1/29.jpg">
 

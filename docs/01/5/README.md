@@ -288,18 +288,15 @@ void get_dis()                    //获取距离子函数
   Serial.print(distance);
   Serial.println("cm");
 }
-
 void lcd_display()                //lcd显示子函数
 {
   int dis = int(distance);
-  
   lcd.setCursor(0,1);
   if(dis >= 0 && dis < 1000)
   {
     lcd.print("Dis:");
     lcd.print(dis);
   }
-  
   if(dis < 100) lcd.print(' ');
   
   lcd.setCursor(8,1);
