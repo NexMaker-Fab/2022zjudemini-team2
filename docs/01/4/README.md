@@ -126,10 +126,6 @@ void draw() {
 
 <embed src="img/0/0.mp4" width="500" heigh="500"/>
 
-
-
-
-
 - 源代码：
 ```
 import ddf.minim.*;
