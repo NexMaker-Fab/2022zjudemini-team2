@@ -61,7 +61,7 @@ void setup() {
   pinMode(echoPin, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600); //启动串口通信
-=
+}
 void loop() {
   // 发送10微秒的高电平信号，以触发传感器发送超声波
   digitalWrite(trigPin, HIGH);
