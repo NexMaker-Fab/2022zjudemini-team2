@@ -308,3 +308,10 @@ void lcd_display()                //lcd显示子函数
 ```
 - 效果展示
 <img src="img/0/4.gif">
+
+## reference
+[Arduino](https://www.arduino.cc/)
+[Arduino 教程](https://www.w3cschool.cn/arduino/)
+[Arduino实现超声波测距](https://blog.csdn.net/weixin_44996090/article/details/105922780)
+[雨滴传感器模块（雨水/雨量/叶面湿度）](https://www.arduino.cn/thread-89184-1-1.html)
+[LCD1602屏幕简介（全网最详细教程）](https://blog.csdn.net/aaaaaaaa123345/article/details/124212417)

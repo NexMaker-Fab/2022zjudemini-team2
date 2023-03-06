@@ -11,6 +11,5 @@
 
 
 [GitHub](https://github.com/NexMaker-Fab/2022zjudemini-team2)
-[Get Started](docs/README.md)
-[Get Started2](README.md)
+[Get Started](README.md)
 

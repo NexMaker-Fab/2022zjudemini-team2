@@ -67,14 +67,43 @@ node -v
 <img src="img/1/7.png">
 
 1. 在vs code中建立新文件夹，将侧边栏结构按顺序嵌套在文件夹中
-2. 创建一个—sidebar.md文档，编写侧边栏目录并链接在子页面中
+2. 创建一个_sidebar.md文档，编写侧边栏目录并链接在子页面中
 3. 编辑各子页面内容
 4. 将各子页面链接在侧边栏中
 
 ### 4.封面制作
-1. 在根目录下创建-coverpage文件，在index文件中键入 
+1. 在根目录下创建_coverpage文件，在index文件中键入 
 
         coverpage：ture
+- 具体代码如下
+
+```
+<!-- index.html -->
+
+<script>
+  window.$docsify = {
+    coverpage: true
+  }
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+```
+- 目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
+```
+<!-- _coverpage.md -->
+
+# docsify <small>3.5</small>
+
+[GitHub](https://github.com/NexMaker-Fab/2022zjudemini-team2)
+[Get Started](#quick-start)
+
+<!-- 背景图片 -->
+
+![](feng.JPG)
+
+<!-- 背景色 -->
+
+![color](#f0f0f0)
+```
 
 #### 4.本地上传部署
 1. 打开GitHub desktop，当我们每次做出修改时，将项目文件克隆到本地进行修改后实时上传更新即可
@@ -104,6 +133,8 @@ vs code打开工作区就会看到所有代码显示在这里
          docsify serve 
 即可获取预览网页
 
-
+## reference
+[docsify:一个神奇的文档网站生成器。](https://www.nexmaker.com/doc/1projectmanage/github&docsify.html)
+[docsify使用指南](https://www.cnblogs.com/Can-daydayup/p/15413267.html)
 
 [>>return](/)
