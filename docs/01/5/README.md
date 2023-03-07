@@ -57,18 +57,22 @@ Arduino 是一个基于易于使用的硬件和软件的开源电子平台。 Ar
 
 ## Arduino 板的安装
 1. **准备器材** 
-首先，你必须有Arduino板（你可以选择你喜欢的板）和一根USB线。如果你使用Arduino UNO，Arduino Duemilanove，Nano，Arduino Mega 2560或Diecimila，你将需要一个标准USB线（A插头到B插头）。
+首先，你必须有Arduino板（你可以选择你喜欢的板）和一根USB线。如果你使用Arduino UNO，Arduino Duemilanove，Nano，Arduino Mega 2560或Diecimila，你将需要一个标准USB线（A插头到B插头）。<br>
+
 2. **下载Arduino IDE软件。**
 
-你可以从Arduino官方网站的[下载页面](https://www.arduino.cc/en/software)获得不同版本的Arduino IDE。你必须选择与你的操作系统（Windows，IOS或Linux）兼容的软件。文件下载完成后，解压缩文件。
+你可以从Arduino官方网站的[下载页面](https://www.arduino.cc/en/software)获得不同版本的Arduino IDE。你必须选择与你的操作系统（Windows，IOS或Linux）兼容的软件。文件下载完成后，解压缩文件。<br>
+
 3. **打开板的电源。**
 
 Arduino Uno，Mega，Duemilanove和Arduino Nano通过USB连接到计算机或外部电源自动获取电源。如果你使用Arduino Diecimila，则必须确保板的配置为从USB连接获取电源。电源选择使用跳线，一小块塑料安装在USB和电源插孔之间的三个引脚中的两个。检查它是否在最靠近USB端口的两个引脚上。
 
-使用USB线将Arduino板连接到计算机。绿色电源LED等（标有PWR）应该发光。
+使用USB线将Arduino板连接到计算机。绿色电源LED等（标有PWR）应该发光。<br>
+
 4. **启动Arduino IDE。**
 
-下载Arduino IDE软件后，需要解压缩该文件夹。在文件夹中，你可以找到带有无穷大标签(application.exe)的应用程序图标。双击该图标以启动IDE。
+下载Arduino IDE软件后，需要解压缩该文件夹。在文件夹中，你可以找到带有无穷大标签(application.exe)的应用程序图标。双击该图标以启动IDE。<br>
+
 5. **打开你的第一个项目。**
 
 一旦软件启动，你有两个选项：
