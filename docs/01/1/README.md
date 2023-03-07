@@ -17,13 +17,21 @@
 <img src="img/1/6.png">
 
 2. **安装node.js.**
-
+点击[官网](https://nodejs.org/zh-cn/download/)下载
 安装后可以使用命令来检查是否安装成功
-检查node。
+检查node版本。
 
 ```
 node -v
 ```
+安装node的同时也安装了npm（docsify-cli 工具），执行 
+```
+npm -v
+```
+ 查看npm版本<br>
+<img src="img/1/30.png">
+
+
 3. **使用github+Docsify作为网站搭建工具**
 
 详情参照[此网页教程](https://www.nexmaker.com/doc/1projectmanage/github&docsify.html)
@@ -35,7 +43,30 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 你可以在 GitHub 的 github.io 域或自己的自定义域上托管站点。
 你可以创建在 Internet 上公开可用的 GitHub Pages 站点。 使用 GitHub Enterprise Cloud 的组织还可以通过管理对站点的访问控制来私下发布站点
 
-### 2.使用Docsify配合Markdown语言搭建网站
+
+### 2.本地部署
+1. 打开GitHub desktop，当我们每次做出修改时，将项目文件克隆到本地进行修改后实时上传更新即可
+<img src="img/1/8.png">
+
+<img src="img/1/9.png">
+
+2. 每次更改后点击提交并更新
+<img src="img/1/10.png">
+
+3. 在vscode中提交代码到仓库
+vs code打开工作区就会看到所有代码显示在这里
+<img src="img/1/11.png">
+
+点击+号，把所有文件提交到暂存区。
+
+然后打开菜单选择--提交已暂存的.
+
+<img src="img/1/12.png">
+
+
+
+
+### 3.使用Docsify配合Markdown语言搭建网站
 1. 全局安装  docsify-cli 工具，可以方便地创建及在本地预览生成的文档。
 
 打开github终端并键入下列代码：
@@ -65,11 +96,11 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
     接着创建 _sidebar.md 文件，内容如下
         <!-- docs/_sidebar.md -->
 
-        *[首页](zh-cn/)
-        *[指南](zh-cn/guide)
+        *[首页](/)
+        *[其他tab](#加其他文档路径)
     需要在 ./docs 目录创建 .nojekyll 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
 
-### 3.按文件嵌套结构创建文件夹及子目录
+### 4.按文件嵌套结构创建文件夹及子目录
 <img src="img/1/7.png">
 
 1. 在vs code中建立新文件夹，将侧边栏结构按顺序嵌套在文件夹中
@@ -77,7 +108,7 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 3. 编辑各子页面内容
 4. 将各子页面链接在侧边栏中
 
-### 4.封面制作
+### 5.封面制作
 1. 在根目录下创建_coverpage文件，在index文件中键入 
 
         coverpage：ture
@@ -97,53 +128,21 @@ GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓�
 
 ```
 <!-- _coverpage.md -->
-# docsify <small>3.5</small>
-[GitHub](https://github.com/NexMaker-Fab/2022zjudemini-team2)
-[Get Started](#quick-start)
-<!-- 背景图片 -->
-![](feng.JPG)
-<!-- 背景色 -->
-![color](#f0f0f0)
+# docsify <small>封面文字大小</small>
+[链接名称](链接地址)
+
+背景图片设置：
+![](封面图片.JPG)
+
+背景色设置 
+![color](色号)
 ```
-### 5.从远程仓库获取更改
-与远程存储库交互时，这些命令非常有用。 clone 和 fetch 将远程代码从存储库的远程 URL 下载到本地计算机，merge 用于将其他人的工作与你的工作合并在一起，而 pull 是 fetch 和 merge 的组合。
-1. 克隆仓库
-克隆存储库时，可以从多个不同的 URL 中进行选择。 登录到 GitHub 后，可在仓库详细信息下面找到这些 URL：
-<img src="img/1/27.jpg">
 
-运行 git clone 时，会执行以下操作：
 
-- 创建名为 repo 的新文件夹
-- 将它初始化为 Git 仓库
-- 创建名为 origin 的远程存储库，指向用于克隆的 URL
-- 将所有的仓库文件和提交下载到那里
 
-### 6.本地上传部署
-1. 打开GitHub desktop，当我们每次做出修改时，将项目文件克隆到本地进行修改后实时上传更新即可
-<img src="img/1/8.png">
-
-<img src="img/1/9.png">
-
-2. 每次更改后点击提交并更新
-<img src="img/1/10.png">
-
-3. 在vscode中提交代码到仓库
-vs code打开工作区就会看到所有代码显示在这里
-<img src="img/1/11.png">
-
-点击+号，把所有文件提交到暂存区。
-
-然后打开菜单选择--提交已暂存的.
-
-<img src="img/1/12.png">
-
-### 7.设置 GitHub Pages 站点的可见性
+### 6.设置 GitHub Pages 站点的可见性
 如果对 GitHub Pages 具有访问控制权限，便可以通过私密发布站点来限制访问项目站点。 只有对发布站点的仓库具有读取权限的人才可访问私密发布的站点。 
-- **以私密方式发布的站点的子域**
-    私下发布的站点与公开发布的站点位于不同的子域中。 这可确保您的 GitHub Pages 站点从发布之日起是安全的：
 
-    我们使用 TLS 证书自动保护 *.pages.github.io 的每个子域，并强制执行 HSTS 以确保浏览器始终通过 HTTPS 提供页面。
-    我们对以私密方式发布的站点使用独特的子域，从而确保组织中其他存储库不能在与该站点相同的来源发布内容。 这样可以保护这些站点免受“cookie 抛掷”攻击。 这也是为什么我们不在 github.com 域上托管 GitHub Pages 网站的原因。
 - **更改 GitHub Pages 站点的可见性**
 1. 在 GitHub Enterprise Cloud 上，导航到站点的仓库。 1. 在存储库名称下，单击 “设置”。
 <img src="img/1/29.jpg">
