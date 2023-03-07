@@ -25,13 +25,29 @@
 
 ## 3D打印测试
 #### 测试模型1
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture31.jpg"/>
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture32.jpg"/>
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture33.jpg"/>
+
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture3D%201.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture3D%202.jpg"/>
+
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture3D%203.jpg"/>
 
 #### 测试模型2
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture34.jpg"/>
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture35.jpg"/>
+- 建立模型
+<img src="img/1/1/01.png">
+
+- 打印
+<img src="img/1/1/03.png">
+
+- 清除
+<img src="img/1/1/05.gif">
+
+- 打磨
+<img src="img/1/1/06.gif">
+
+- 装配
+<img src="img/1/1/07.gif">
+
+- 完成
 
 
 ## 激光雕刻测试
@@ -86,6 +102,95 @@
 #### 速度测试
 
 1. 软件参数设定与调整
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture39.png"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture36.png"/>
+
 2. 激光雕刻机切割测试
-<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture310.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL1.gif"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL2.jpg"/>
+
+3. 测试结果
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL3.jpg"/>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL4.jpg"/>
+
+<table border="1" style="margin:auto;content:center">
+<tr>
+<td>Power/Speed </td>
+<td> 10 </td>
+<td> 20 </td>
+<td> 30 </td>
+<td> 40 </td>
+<td> 50 </td>
+<td> 60 </td>
+<td> 70 </td>
+</tr>
+<tr>
+<td> 40 </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+</tr>
+<tr>
+<td> 50 </td>
+<td> Y </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+</tr>
+<tr>
+<td> 60 </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+</tr>
+<tr>
+<td> 70 </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> N </td>
+<td> N </td>
+<td> N </td>
+</tr>
+<tr>
+<td> 80 </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> N </td>
+<td> N </td>
+</tr>
+<tr>
+<td> 90 </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> Y </td>
+<td> N </td>
+<td> N </td>
+</tr>
+</table>
+</style>
+<br/>
+
+### 准确度测试
+<p align="left"> 1.画出目标图像 </p>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture39.png"/>
+<p align="left"> 2.切割材料. </p>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL5.jpg"/>
+<p align="left"> 3.测量误差. 单片宽度 5mm, 数量 10, 总长度为 46.08mm, 误差 3.92mm. </p>
+<img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL6.jpg"/>

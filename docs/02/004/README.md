@@ -110,7 +110,328 @@ Sensor Shield V5.0适用于Uno，Mega 2560和类似外形的Arduino板，并提�
 
 <img src="img/2/36.png">
 
+- #### 程序编写
+代码编写方面，案例代码相对比较简单，不用加头文件，可以在任意Arduino编译平台上编写，其中串口发送简单指令进行语音模块的控制，常用指令如下表所示，需要注意的是要以十六进制格式发送数据
+<img src="img/2/36.png">
+
 >**tip**:  串口是3.3V的TTL 电平，如果主机系统是 5V电平请在中间串1K 电阻。
+
+## 程序设计
+
+### part 1 被动辅助演奏：RFID识别播放
+
+- #### 程序逻辑
+该程序是用于Arduino的RFID音乐识别控制器，可读取RFID卡片的UID，并根据UID控制音乐播放器。程序使用MFRC522库来与RFID模块通信，使用TimerOne库创建一个定时器，在一段时间内检查是否读取到了卡片，然后根据读取到的卡片UID控制8个数字输出引脚的状态来控制音乐播放器的开关。
+
+<img src="img/2/39.png">
+
+
+程序的逻辑如下：
+
+1. 导入SPI、MFRC522和TimerOne库。
+2. 定义RFID模块和数字输出引脚的针脚。
+3. 初始化串口通信、SPI总线和MFRC522模块。
+4. 初始化数字输出引脚和定时器，设置一个定时器中断函数来计时。
+5. 在循环中检查定时器的时间是否大于1秒，如果是，则关闭所有数字输出引脚。
+6. 使用MFRC522库检查是否有新的RFID卡片在读卡器附近。
+7. 如果有卡片，则读取卡片的UID，并将UID转换为字符串格式。
+8. 如果卡片的UID与预设的UID匹配，则根据卡片的UID设置数字输出引脚的状态来控制电子锁的开关。
+9. 重置定时器时间为0。
+10. 要连接Arduino线路，请按照以下方式连接：<br>
+    将MFRC522模块的SDA引脚连接到Arduino的数字针脚10。<br>
+    将MFRC522模块的SCK引脚连接到Arduino的数字针脚13。<br>
+    将MFRC522模块的MOSI引脚连接到Arduino的数字针脚11。<br>
+    将MFRC522模块的MISO引脚连接到Arduino的数字针脚12。<br>
+    将MFRC522模块的RST引脚连接到Arduino的数字针脚9。<br>
+    将8个数字输出引脚分别连接到电子锁的控制引脚。在代码中，它们被定义为K1到K8，它们分别连接到Arduino的数字针脚2到数字针脚16。
+
+
+
+- #### 源代码
+
+```
+//Viral Science
+//RFID
+#include <SPI.h>
+#include <MFRC522.h>
+#include <TimerOne.h>
+#define SS_PIN 10  //定义SDA即信号输入口（读取）
+#define RST_PIN 9   //定义RST即断点输入口（复位）
+MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.（创建一个该项目）
+int K1 = 2;
+int K2 = 3;
+int K3 = 4;
+int K4 = 5;
+int K5 = 6;//语音播放模块
+int K6 = 14;
+int K7 = 15;
+int K8 = 16;
+int a = 0;//定时器用
+
+void timerIsr()
+{
+  a++;
+}
+void setup()
+{
+  Serial.begin(9600);   // Initiate a serial communication
+  SPI.begin();      // Initiate  SPI bus      （初始化SPI总线）
+  mfrc522.PCD_Init();   // Initiate MFRC522    （初始化MFRC522）
+  Serial.println("Put your card to the reader...");
+  Serial.println();
+  pinMode(K1, OUTPUT);
+  pinMode(K2, OUTPUT);
+  pinMode(K3, OUTPUT);
+  pinMode(K4, OUTPUT);
+  pinMode(K5, OUTPUT);
+  pinMode(K6, OUTPUT);
+  pinMode(K7, OUTPUT);
+  pinMode(K8, OUTPUT);
+  digitalWrite(K1, HIGH);
+  digitalWrite(K2, HIGH);
+  digitalWrite(K3, HIGH);
+  digitalWrite(K4, HIGH);
+  digitalWrite(K5, HIGH);
+  digitalWrite(K6, HIGH);
+  digitalWrite(K7, HIGH);
+  digitalWrite(K8, HIGH);
+  Timer1.initialize(100000);
+  Timer1.attachInterrupt( timerIsr );
+}
+void loop()
+{
+  if (a > 1) //时间大于1秒
+  {
+    digitalWrite(K1, HIGH);
+    digitalWrite(K2, HIGH);
+    digitalWrite(K3, HIGH);
+    digitalWrite(K4, HIGH);
+    digitalWrite(K5, HIGH);
+    digitalWrite(K6, HIGH);
+    digitalWrite(K7, HIGH);
+    digitalWrite(K8, HIGH);
+  }
+  // Look for new cards       （找卡————是否识别到新卡，如果无，返回数值）
+  if ( ! mfrc522.PICC_IsNewCardPresent())
+  {
+    return;
+  }
+  // Select one of the cards    （选择识别卡————验证NUID是否可读，读不出就返回数值）
+  if ( ! mfrc522.PICC_ReadCardSerial())
+  {
+    return;
+  }
+  //Show UID on serial monitor
+  //Serial.print("UID tag :");
+  String content = "";
+  byte letter;
+  for (byte i = 0; i < mfrc522.uid.size; i++)       // 将NUID保存到nuidPICC数组
+    Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");   //将字节数组以十六进制值的形式转储到串行的辅助例程
+  {
+    Serial.print(mfrc522.uid.uidByte[i], HEX);    //HEX为数据转十六进制输出
+    content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+    content.concat(String(mfrc522.uid.uidByte[i], HEX));
+  }
+  //Serial.println();
+  //Serial.print("Message : ");
+  content.toUpperCase();
+  if (content.substring(1) == "53 3E 2C AD" || content.substring(1) == "03 16 27 AD" || content.substring(1) == "D3 23 A3 AC" || content.substring(1) == "23 24 A0 AC" || content.substring(1) == "83 C2 92 AC") //change here the UID of the card/cards that you want to give access
+  {
+    if (content.substring(1) == "53 3E 2C AD")
+    {
+      Serial.println("A");
+      digitalWrite(K1, LOW);
+      digitalWrite(K2, HIGH);
+      digitalWrite(K3, HIGH);
+      digitalWrite(K4, HIGH);
+      digitalWrite(K5, HIGH);
+      digitalWrite(K6, HIGH);
+      digitalWrite(K7, HIGH);
+      digitalWrite(K8, HIGH);
+      a = 0;
+    }
+    if (content.substring(1) == "03 16 27 AD")
+    {
+      Serial.println("B");
+      digitalWrite(K1, HIGH);
+      digitalWrite(K2, LOW);
+      digitalWrite(K3, HIGH);
+      digitalWrite(K4, HIGH);
+      digitalWrite(K5, HIGH);
+      digitalWrite(K6, HIGH);
+      digitalWrite(K7, HIGH);
+      digitalWrite(K8, HIGH);
+      a = 0;
+    }
+    if (content.substring(1) == "D3 23 A3 AC")
+    {
+      Serial.println("C");
+      digitalWrite(K1, HIGH);
+      digitalWrite(K2, HIGH);
+      digitalWrite(K3, LOW);
+      digitalWrite(K4, HIGH);
+      digitalWrite(K5, HIGH);
+      digitalWrite(K6, HIGH);
+      digitalWrite(K7, HIGH);
+      digitalWrite(K8, HIGH);
+      a = 0;
+    }
+    if (content.substring(1) == "23 24 A0 AC")
+    {
+      Serial.println("D");
+      digitalWrite(K1, HIGH);
+      digitalWrite(K2, HIGH);
+      digitalWrite(K3, HIGH);
+      digitalWrite(K4, LOW);
+      digitalWrite(K5, HIGH);
+      digitalWrite(K6, HIGH);
+      digitalWrite(K7, HIGH);
+      digitalWrite(K8, HIGH);
+      a = 0;
+    }
+    if (content.substring(1) == "83 C2 92 AC")
+    {
+      Serial.println("E");
+      digitalWrite(K1, HIGH);
+      digitalWrite(K2, HIGH);
+      digitalWrite(K3, HIGH);
+      digitalWrite(K4, HIGH);
+      digitalWrite(K5, LOW);
+      digitalWrite(K6, HIGH);
+      digitalWrite(K7, HIGH);
+      digitalWrite(K8, HIGH);
+      a = 0;
+    }
+  }
+
+  else   {
+    Serial.println(" Access denied");
+  }
+}
+```
+
+
+### part 2 主动识别演奏：超声波测距播放
+
+- #### 程序逻辑
+该程序利用超声波传感器检测不同距离来控制无源蜂鸣器发出不同音调的声音，并结合RGB LED显示出不同颜色的灯光
+
+<img src="img/2/38.png">
+
+- #### 接线图
+<img src="img/2/40.png">
+
+- #### 效果展示
+
+<iframe frameborder="0" width="960px" height="540px" src="//player.bilibili.com/player.html?aid=908249890&bvid=BV1AM4y1C71B&cid=1043386909&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+- #### 源代码
+
+```
+#define NTC0 -1
+#define NTC1 262
+#define NTC2 294
+#define NTC3 330
+#define NTC4 350
+#define NTC5 393
+#define NTC6 441
+#define NTC7 495
+
+const int TrigPin = 2;
+const int EchoPin = 3;
+float cm;
+int tonepin=8;   
+
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
+
+void setup()
+{
+Serial.begin(9600);
+pinMode(TrigPin, OUTPUT);
+pinMode(EchoPin, INPUT);
+pinMode(tonepin,OUTPUT);
+
+pinMode(redPin, OUTPUT);
+pinMode(greenPin, OUTPUT);
+pinMode(bluePin, OUTPUT);
+}
+
+void loop()
+{
+digitalWrite(tonepin, LOW);
+
+digitalWrite(TrigPin, LOW); //低高低电平发一个短时间脉冲去TrigPin
+delayMicroseconds(2);
+digitalWrite(TrigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(TrigPin, LOW);
+
+cm = pulseIn(EchoPin, HIGH) / 58.0; //将回波时间换算成cm
+cm = (int(cm * 100.0)) / 100.0; //保留两位小数
+
+if (cm>=1 && cm<=5){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC1);
+  setColor(0, 255, 0); // 红色亮
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=6 && cm<=10){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC2);
+  setColor(255, 0, 0); 
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=11 && cm<=15){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC3);
+  setColor(0, 0, 255); 
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=16 && cm<=20){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC4);
+  setColor(80, 0, 80); 
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=21 && cm<=25){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC5);
+  setColor(255, 0, 255); 
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=26 && cm<=30){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC6);
+  setColor(255, 0, 0); 
+  delay(1000);   
+  noTone(tonepin);}
+
+else if (cm>=31 && cm<=35){
+  digitalWrite(tonepin, HIGH);
+  tone(tonepin,NTC7);
+  setColor(0, 0, 255); 
+  delay(1000);   
+  noTone(tonepin);}
+
+} 
+
+void setColor(int red, int green, int blue)
+{
+  analogWrite(redPin, 255-red);
+  analogWrite(greenPin, 255-green);
+  analogWrite(bluePin, 255-blue);  
+}
+```
+
+
+
 
 
 ## reference
