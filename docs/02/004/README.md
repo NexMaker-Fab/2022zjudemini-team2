@@ -60,15 +60,20 @@
 <img src="img/2/27.jpg">
 
 2. 定义RFID模块和数字输出引脚
-<img src="img/2/28.png">
+<img src="img/2/28.png" width="300">
 
 3. 初始化串口通信、SPI总线和MFRC522模块。
 
 4. 编写相关程序。
 
+>**tip**:  MFRC522的电源接口要连接3.3v电源。若使用的是5V的MCU，注意分压。
+
+------
+
 ### 2. Arduino Sensor Shield v5 传感器扩展板
 Sensor Shield V5.0适用于Uno，Mega 2560和类似外形的Arduino板，并提供了一种方便的方法来连接传感器和其他外围设备，例如伺服电机。
-<img src="img/2/29.jpg">
+
+<img src="img/2/29.jpg" width="300">
 
 - #### 主要功能：
  将标准的Arduino I / O引脚引到接头，以及每个I / O的专用接地和电源引脚，以方便将传感器连接到其他设备。
@@ -76,12 +81,41 @@ Sensor Shield V5.0适用于Uno，Mega 2560和类似外形的Arduino板，并提�
 辅助电源连接器允许将单独的电源提供给与D0-D13引脚关联的电源引脚，这对于驱动伺服电机非常方便。
 远程复位开关位于护罩上，以方便操作。它还将板上的针脚13“ L” LED灯带到屏蔽罩，以方便查看。
 
+<img src="img/2/30.jpg" width="300">
 
+- #### 硬件接线
+<img src="img/2/34.jpg">
+
+------
+
+### 3. DY-SV5W 语音播放模块
+
+- #### 硬件概述
+    DY-SV5W是一款智能语音模块，集成IO分段触发，UART串口控制，ONE_line 单总线串口控制，标准MP3等7种工作模式；板载5W D类功放，可直接驱动4Ω，3~5W喇叭； 支持MP3,WAV解码格式，最大支持32G TF卡存储，可通过USB数据线连接电脑更新TF 卡存储 音频文件。
+
+<img src="img/2/31.png" width="300">
+
+- #### 模块引脚定义
+<img src="img/2/32.png">
+
+- #### 拨码开关模式配置
+“按键组合播放”是指IO0-IO7输出对应的电平后恢复原来的高电平,类似于按键触发一次 “电平组合播放”是指IO0-IO7输出对应的电平后保持电平不变 “I/O组合（独立）模式0”与“I/O组合（独立）模式1”的区别在于前者模式释放电平后 继续播放当前曲目至结束，后者模式释放电平后立即停止播放曲目。
+
+<img src="img/2/33.jpg" >
+
+我们选用了**I/O独立模式0**
+
+- #### 硬件接线
+<img src="img/2/35.png">
+
+<img src="img/2/36.png">
+
+>**tip**:  串口是3.3V的TTL 电平，如果主机系统是 5V电平请在中间串1K 电阻。
 
 
 ## reference
 [Arduino](https://www.arduino.cc/)<br>
-[Arduino 教程](https://www.w3cschool.cn/arduino/)<br>
+[语音播放模块（DY-SV5W）](https://blog.csdn.net/qq_36955622/article/details/103512824)<br>
 [RFID工作原理及RC522模块介绍](https://blog.csdn.net/qq78442761/article/details/105432385/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-128687619.pc_relevant_multi_platform_whitelistv4&spm=1001.2101.3001.4242.1&utm_relevant_index=3)<br>
 [arduino rc522模块使用](https://blog.csdn.net/economics3/article/details/128687619?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-128687619-blog-82667116.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-128687619-blog-82667116.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=5)<br>
 [Arduino Sensor Shield v5 传感器扩展板](https://cloud.tencent.com/developer/article/1691985)<br>
