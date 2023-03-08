@@ -125,6 +125,10 @@ Sensor Shield V5.0适用于Uno，Mega 2560和类似外形的Arduino板，并提�
 
 <img src="img/2/39.png">
 
+- #### 效果展示
+
+<iframe frameborder="0" width="960px" height="540px"  src="//player.bilibili.com/player.html?aid=823157997&bvid=BV1Hg4y1t7RM&cid=1044071768&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 程序的逻辑如下：
 
