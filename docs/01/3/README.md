@@ -32,10 +32,33 @@
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture3D%203.jpg"/>
 
 #### 测试模型2
+
 - 建立模型
 <img src="img/1/1/01.png">
 
 - 打印
+    <img src="img/1/3d/1.jpg">
+    <br>
+<br>
+    摆放位置<br>
+    <img src="img/1/3d/2.jpg">
+    <img src="img/1/3d/3.jpg"><br>
+<br>
+    设置参数<br>
+    <img src="img/1/3d/4.jpg">
+    <img src="img/1/3d/5.jpg">
+    <img src="img/1/3d/6.jpg">
+    <img src="img/1/3d/7.jpg">
+    <img src="img/1/3d/8.jpg">
+    <img src="img/1/3d/9.jpg">
+    <img src="img/1/3d/10.jpg"><br>
+<br>
+    切片预览<br>
+    <img src="img/1/3d/11.jpg">
+
+
+
+<br>
 <img src="img/1/1/03.png">
 
 - 清除
