@@ -169,7 +169,7 @@ vs code打开工作区就会看到所有代码显示在这里
 
 2. 在边栏的“代码和自动化”部分，单击“ 页面”。
 3. 在 GitHub Pages 下，选择“GitHub Pages 可见性”下拉菜单，然后单击可见性。
-<img src="img/1/26.jpg">
+
 
 4. 若要查看已发布的网站，请在“GitHub Pages”下单击“ 访问网站”。
 <img src="img/1/29.jpg">

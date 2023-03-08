@@ -36,27 +36,57 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 <img src="07.jpg" width="300">
 
 ## 建模过程2
+
+
+
+
+
 - #### 底座
-1. 首先绘制出底座的形状，给定尺寸及约束。
-<img src="img/1/2/1.png" width="300">
+首先，选择前视基准面<br>
+<img src="img/1/CAD/8.0.png" width="300">
 
-2. 拉伸凸台成型。
-<img src="img/1/2/2.png" width="300">
+点击草图绘制命令<br>
+<img src="img/1/CAD/8.1.png" width="300">
 
-3. 绘制底面挖空部分，并设定尺寸。
+选择直线命令<br>
+<img src="img/1/CAD/8.2.png" width="300">
+
+选择智能尺寸命令，给定尺寸<br>
+<img src="img/1/CAD/8.3.png" width="300">
+
+绘制出底座的形状<br>
+<img src="img/1/CAD/8.4.png" width="300">
+
+添加约束<br>
+<img src="img/1/CAD/7.9.png" width="300">
+
+
+拉伸凸台成型<br>
+<img src="img/1/CAD/8.5.png" width="300"><br>
+<img src="img/1/CAD/8.51.png" width="300"><br>
+<img src="img/1/2/2.png" width="300"><br>
+
+绘制底面挖空部分，并设定尺寸<br>
 <img src="img/1/2/3.png" width="300">
 
-4. 切除拉伸。
+切除拉伸<br>
 <img src="img/1/2/4.png" width="300">
 
-5. 绘制侧面的直槽孔和小孔。
+选择直槽孔，圆形命令<br>
+<img src="img/1/CAD/8.6.png" width="300"><br>
+<img src="img/1/CAD/8.7.png" width="300"><br>
+
+绘制草图<br>
 <img src="img/1/2/5.png" width="300">
 
-6. 伸切除形成凹槽。
+选择拉伸切除命令<br>
+<img src="img/1/CAD/8.10.png" width="300">
+
+形成凹槽<br>
 <img src="img/1/2/6.png" width="300">
 
 - #### 连接杆 
-绘制连杆形状，确定固定孔的位置，然后拉伸成型。
+绘制连杆形状，确定固定孔的位置，然后拉伸成型<br>
 <img src="img/1/2/7.png" width="300">
 
 - #### 插销
@@ -75,6 +105,12 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 <img src="img/1/2/11.png" width="300">
 
 - #### 以下为同心、重合、相切等装配过程：
+选择两个圆柱面，选择同心配合<br>
+<img src="img/1/CAD/9.1.png" width="300"><br>
+
+选择两个平面，重合配合<br>
+<img src="img/1/CAD/9.2.png" width="300"><br>
+
 <img src="img/1/2/12.png" width="300">
 <img src="img/1/2/13.png" width="300">
 <img src="img/1/2/14.png" width="300">
@@ -86,6 +122,9 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 
 - #### 工程图
 <img src="img/1/31.jpg">
+
+- #### 插件
+<img src="img/1/CAD/9.3.png" width="600">
 
 ## 建模过程3
 1. 绘制草图，旋转成型
