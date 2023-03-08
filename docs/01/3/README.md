@@ -215,5 +215,5 @@
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20picture39.png"/>
 <p align="left"> 2.切割材料. </p>
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL5.jpg"/>
-<p align="left"> 3.测量误差. 单片宽度 5mm, 数量 10, 总长度为 46.08mm, 误差 3.92mm. </p>
+<p align="left"> 3.测量误差. 单片宽度 5mm, 数量 10, 总长度为 46.08mm,激光光斑直径3.92mm. </p>
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL6.jpg"/>
