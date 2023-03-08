@@ -69,7 +69,7 @@ vs code打开工作区就会看到所有代码显示在这里
 ### 3.使用Docsify配合Markdown语言搭建网站
 1. 全局安装  docsify-cli 工具，可以方便地创建及在本地预览生成的文档。
 
-打开github终端并键入下列代码：
+打开git终端并键入下列代码：
 ```
     npm i docsify-cli -g
 ```
@@ -94,10 +94,26 @@ vs code打开工作区就会看到所有代码显示在这里
         </script>
         <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
     接着创建 _sidebar.md 文件，内容如下
-        <!-- docs/_sidebar.md -->
+   
 
-        *[首页](/)
-        *[其他tab](#加其他文档路径)
+    ```
+    <!-- docs/_sidebar.md -->
+   * <center>Four Vegetables </center>
+
+    * [首页](/)
+
+    * 平时作业
+    * [1.web](/01/1/)
+    * [2.CAD](/01/2/)
+    * [3.3D打印](/01/3/)
+    * [4.processing](/01/4/)
+    * [5.Arduino](/01/5/)
+    * 最终项目
+    * [1.主题选择](/02/001/)
+    * [2.背调](/02/002/)
+    * [3.设计过程](/02/003/)
+    * [4.原型制作](/02/004/)
+    ```
     需要在 ./docs 目录创建 .nojekyll 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
 
 ### 4.按文件嵌套结构创建文件夹及子目录
@@ -127,15 +143,19 @@ vs code打开工作区就会看到所有代码显示在这里
 - 目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
 
 ```
-<!-- _coverpage.md -->
-# docsify <small>封面文字大小</small>
-[链接名称](链接地址)
+![logo](feng.JPG)
 
-背景图片设置：
-![](封面图片.JPG)
+# welcome to our web~ <small>four vegetables</small>
 
-背景色设置 
-![color](色号)
+> 一个设计小团队的日常。
+
+- 向下滚动查看更多
+
+
+
+[GitHub](https://github.com/NexMaker-Fab/2022zjudemini-team2)
+[Get Started](README.md)
+
 ```
 
 
@@ -145,14 +165,14 @@ vs code打开工作区就会看到所有代码显示在这里
 
 - **更改 GitHub Pages 站点的可见性**
 1. 在 GitHub Enterprise Cloud 上，导航到站点的仓库。 1. 在存储库名称下，单击 “设置”。
-<img src="img/1/29.jpg">
+<img src="img/1/28.jpg">
 
 2. 在边栏的“代码和自动化”部分，单击“ 页面”。
 3. 在 GitHub Pages 下，选择“GitHub Pages 可见性”下拉菜单，然后单击可见性。
 <img src="img/1/26.jpg">
 
 4. 若要查看已发布的网站，请在“GitHub Pages”下单击“ 访问网站”。
-<img src="img/1/28.jpg">
+<img src="img/1/29.jpg">
 
 ## tips
 1. 重新开启vs code时，要调出本地预览网页，需先在下方终端中输入

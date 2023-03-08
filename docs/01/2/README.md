@@ -84,6 +84,9 @@ Fusion 360 是基于云的 CAD/CAM/CAE 工具，同时适用于 Mac 和 PC 的�
 <img src="img/1/2/18.png" width="300">
 <img src="img/1/2/19.png" width="300">
 
+- #### 工程图
+<img src="img/1/31.jpg">
+
 ## 建模过程3
 1. 绘制草图，旋转成型
 <img src="img/1/2/20.jpg" width="300">

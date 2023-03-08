@@ -39,10 +39,10 @@
 <img src="img/1/1/03.png">
 
 - 清除
-<img src="img/1/1/05.gif">
+<img src="img/1/1/06.gif">
 
 - 打磨
-<img src="img/1/1/06.gif">
+<img src="img/1/1/05.gif">
 
 - 装配
 <img src="img/1/1/07.gif">
