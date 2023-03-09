@@ -39,4 +39,7 @@ hello,we are **four vegetables!**
 [>>谢晓倩个人详情](xiexiaoqian)
 
 ## Final project
+
+<img src="img/2/44.png">
+
 [Get](docs/02/001/README.md)

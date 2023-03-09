@@ -67,6 +67,7 @@
 - 打磨
 
 <img src="img/1/1/05.gif">
+
 - 装配
 <img src="img/1/1/07.gif">
 
@@ -74,53 +75,6 @@
 
 
 ## 激光雕刻测试
-
-
-
-#### 切割机详情
-<table border="1" style="margin:auto;text-align:center">
-<tr>
-<th> Properties </th>
-<th> Parameters </th>
-</tr>
-<tr>
-<td> Product </td>
-<td> HX960 </td>
-</tr>
-<tr>
-<td> Working area </td>
-<td> 900x600mm </td>
-</tr>
-<tr>
-<td> Machine </td>
-<td> 1500x1200x1100mm </td>
-</tr>
-<tr>
-<td> Engraving speed </td>
-<td> 0-600mm/s </td>
-</tr>
-<tr>
-<td> Laser power </td>
-<td> 80W </td>
-</tr>
-<tr>
-<td> Resolution ratio </td>
-<td> 0.025mm </td>
-</tr>
-<tr>
-<td> The min word </td>
-<td> Chinese Character2mm / letter1mm </td>
-</tr>
-<tr>
-<td> Power </td>
-<td> AC220V (Floating within a range of 10%), 50HZ, less than 2500W </td>
-</tr>
-<tr>
-<td> Formate </td>
-<td> AI, BMP, GIF, JPEG, PCX, TGA, CDR, DWG, TIFF, PLT, DXF </td>
-</tr>
-</table>
-</style>
 
 #### 速度测试
 
@@ -217,3 +171,30 @@
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL5.jpg"/>
 <p align="left"> 3.测量误差. 单片宽度 5mm, 数量 10, 总长度为 46.08mm,激光光斑直径3.92mm. </p>
 <img src="https://cdn.jsdelivr.net/gh/ghr0821/Esigners-Pic/esigners%20pictureL6.jpg"/>
+
+### 原型材料打印
+
+- 材料：<br>
+    亚克力板<br>
+    热熔胶枪<br>
+    arduino面包板<br>
+
+调整机器参数
+<img src="img/2/41.png">
+
+放置材料
+<img src="img/2/42.png">
+
+定位
+<img src="img/2/43.png">
+
+切割
+<img src="img/0/8.gif">
+<img src="img/0/9.gif">
+
+热熔胶连接
+<img src="img/0/6.gif">
+
+组装拼接
+<img src="img/0/7.gif">
+

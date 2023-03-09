@@ -434,8 +434,17 @@ void setColor(int red, int green, int blue)
 }
 ```
 
+## 原型拼接
 
+### 激光切割
+调整机器参数
+<img src="img/2/41.png">
 
+放置材料
+<img src="img/2/42.png">
+
+定位
+<img src="img/2/43.png">
 
 
 ## reference
